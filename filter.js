@@ -1,9 +1,7 @@
-  
 /**
  * To run this file in Gitpod, use the 
  * command node filter.js in the terminal
  */
-
 
 // Simple Filtering
 const people = [
@@ -21,6 +19,8 @@ const people = [
   },
 ];
 
+const adults = people.filter(person => person.age >= 18);
+console.log('Adults:', adults);
 
 // Complex Filtering
 const students = [
@@ -55,3 +55,9 @@ const students = [
     ]
   },
 ];
+
+const experiencedDevelopers = students.filter(student => {
+  return student.profession === 'Developer' && student.skills.some(skill => skill.yrsExperience >= 3);
+});
+
+console.log('Experienced Developers:', experiencedDevelopers);
